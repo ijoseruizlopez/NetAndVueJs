@@ -1,0 +1,58 @@
+﻿<div >
+
+    <div class="container ">
+        <div class="row" align="center" style="margin-top:20px">
+            <div class="span12">
+                <lable>Por favor, escanee el artículo o ingrese el</lable>
+                <br />
+                <lable>EAN o Código Interno</lable>
+                <br />
+                <div class="footer"  style="margin-top:20px">
+                    <img style="width:128px; height:128px" src="~/wwwroot/assets/images/scan512v2.gif"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Partial("_SearchCodArtEanPartial")
+
+
+
+    <div v-if="LoadingResultCodArticuloEan">
+        <div id="content" class="padding-20">
+            <div class="panel-body">
+                @Html.Partial("_LoadingPartial")
+            </div>
+        </div>
+    </div>
+
+
+    <div v-if="EmptyResultCodEan">
+        <div id="content" class="padding-20">
+            <div class="panel-body">
+                @Html.Partial("_EmptyResultPartial")
+            </div>
+        </div>
+    </div>
+
+
+    <div v-if="EnterMoreOneCaracteres">
+        <div id="content" class="padding-20">
+            <div class="panel-body">
+                <div>
+                    <div class="container ">
+                        <div class="row" align="center" style="margin-top:5px">
+                            <div class="span12">
+                                <div class="footer" style="margin-bottom:10px; margin-right:20px;">
+                                    <img style="width:64px; height:64px" src="~/wwwroot/assets/images/warning.png" />
+                                </div>
+                                <lable style="color:red; margin-right:20px;">Por favor, ingrese al menos 3 caracteres</lable>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

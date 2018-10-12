@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div>
+            <div style="float: left;">
+
+                <div style="float: left;">
+                    <div class="input-group input-group-sm" style="width: 250px;">
+                        <label>Buscar por EAN/Codigo</label>
+                        <input id="SearchPanelTextToSearch" v-model="TextToSearch" v-on:keyup.enter="Refresh()" type="text" class="form-control input-small" placeholder="Codigo de Articulo o EAN" style="height: 30px;" maxlength="60">
+    
+                    </div>
+  
+                </div>
+                <div style="float: left;">
+                    <button  id="SearchPanelSearchButton" class="btn btn-primary btn-sm" onclick="vm.Refresh();" style="height: 32px; margin-top:25px; margin-left:25px;">
+                        <span class="glyphicon glyphicon-search margin-right-10" style="top: 0px;"></span>Buscar
+                    </button>
+                </div>
+
+           
+            </div>
+        </div>
+    </div>
+</div>

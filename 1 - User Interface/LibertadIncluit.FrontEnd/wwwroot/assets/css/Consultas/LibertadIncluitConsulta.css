@@ -1,0 +1,45 @@
+﻿#SearchPanelTextToSearch {
+    width:40% !important
+}
+
+#SearchPanelDescriptionToSearch {
+    width:40% !important
+}
+
+#ArticuloListBind > div.tabs.nomargin-top {
+    margin-top:70px;
+}
+
+#SepartorYellow {
+    color: #FFC80A;
+    background-color: #FFC80A;
+    height: 4px;
+    margin-bottom:0px;
+}
+
+th {
+
+    text-align:center;
+}
+
+td {
+
+    text-align:center;
+}
+
+
+
+#myTable > tbody > tr:focus {
+    background-color:#EFF5FB;
+}
+
+#ArticuloListPanel {
+    width:95%;
+
+    margin: 0 auto;
+}
+
+.mainDivConsulta {
+    display:none;
+    visibility:hidden;
+}

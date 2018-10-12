@@ -1,0 +1,15 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.vs
+bin
+obj
+packages
+_ReSharper.*
+*.suo
+*.user
+
+/1 - User Interface/SimonMips.FrontEnd/Logs
+/1 - User Interface/LibertadIncluit.FrontEnd/wwwroot/UploadedFiles
+/1 - User Interface/LibertadIncluit.FrontEnd/wwwroot/Reports

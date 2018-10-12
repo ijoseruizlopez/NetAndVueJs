@@ -1,0 +1,1897 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB0C550D-7C62-4492-9CD3-E51616C60362}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibertadIncluit.FrontEnd</RootNamespace>
+    <AssemblyName>LibertadIncluit.FrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a" />
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.2.5.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.Container.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.5.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Mvc5, Version=1.3.0.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Mvc5.1.3.0\lib\net45\Unity.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.9.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\net45\Unity.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.WebApi, Version=5.3.0.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.WebAPI.5.3.0\lib\net45\Unity.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Consultas\Controllers\ArticuloController.cs" />
+    <Compile Include="Areas\Consultas\LibertadConsultasAreaRegistration.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MasterLayoutHelper.cs" />
+    <Compile Include="Helpers\TextPlainInputFormatter.cs" />
+    <Compile Include="Helpers\ValidationLocalizationHelper.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver\Class1.cs" />
+    <Compile Include="Resolver\UnityResolver.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="WebAPI\ErroresEnum\ErrorHttpEnum.cs" />
+    <Compile Include="WebAPI\ValidateUserController.cs" />
+    <Compile Include="WebAPI\ArticuloController.cs" />
+    <Compile Include="WebAPI\BaseController\BaseWebApiController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="wwwroot\assets\css\Common\LibertadIncluit.css" />
+    <Content Include="wwwroot\assets\css\Common\LibertadIncluitFooter.css" />
+    <Content Include="wwwroot\assets\css\Common\LibertadIncluitHeader.css" />
+    <Content Include="wwwroot\assets\css\Common\LibertadIncluitLabels.css" />
+    <Content Include="wwwroot\assets\css\Common\LibertadIncluitNav.css" />
+    <Content Include="wwwroot\assets\css\Consultas\LibertadIncluitConsulta.css" />
+    <Content Include="wwwroot\assets\css\essentials.css" />
+    <Content Include="wwwroot\assets\css\font.css" />
+    <Content Include="wwwroot\assets\fonts\et-line.svg" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\assets\icons\backicon.png" />
+    <Content Include="wwwroot\assets\icons\downicon.png" />
+    <Content Include="wwwroot\assets\icons\menu.png" />
+    <Content Include="wwwroot\assets\icons\moreResult.png" />
+    <Content Include="wwwroot\assets\icons\searchMore.png" />
+    <Content Include="wwwroot\assets\icons\userInvalid.png" />
+    <Content Include="wwwroot\assets\imagenesArticulo\CocaCola.png" />
+    <Content Include="wwwroot\assets\imagenesArticulo\LogoLibertadDefault.png" />
+    <Content Include="wwwroot\assets\imagenesArticulo\Pepsi.png" />
+    <Content Include="wwwroot\assets\imagenesArticulo\sprite.png" />
+    <Content Include="wwwroot\assets\images\clearButton.png" />
+    <Content Include="wwwroot\assets\images\accesoDenegado.png" />
+    <Content Include="wwwroot\assets\images\close.png" />
+    <Content Include="wwwroot\assets\images\emptyResult.png" />
+    <Content Include="wwwroot\assets\images\error404.png" />
+    <Content Include="wwwroot\assets\images\loading.gif" />
+    <Content Include="wwwroot\assets\images\Logo Libertad_rojo.jpg" />
+    <Content Include="wwwroot\assets\images\logo_libertad_blanco.png" />
+    <Content Include="wwwroot\assets\images\mini_libertad_blanco.png" />
+    <Content Include="wwwroot\assets\images\petit_blanco.png" />
+    <Content Include="wwwroot\assets\images\scan512v2.gif" />
+    <Content Include="wwwroot\assets\images\scan512.gif" />
+    <Content Include="wwwroot\assets\images\scan512.png" />
+    <Content Include="wwwroot\assets\images\warning.png" />
+    <Content Include="wwwroot\assets\images\warning_.png" />
+    <Content Include="wwwroot\assets\js\app_2.js" />
+    <Content Include="wwwroot\assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="wwwroot\assets\js\config.js" />
+    <Content Include="wwwroot\assets\js\custom.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\af.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-dz.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-kw.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-ly.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-ma.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-sa.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar-tn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ar.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\az.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\be.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\bg.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\bm.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\bn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\bo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\br.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\bs.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ca.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\cs.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\cv.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\cy.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\da.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\de-at.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\de-ch.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\de.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\dv.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\el.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\en-au.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\en-ca.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\en-gb.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\en-ie.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\en-nz.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\eo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\es-do.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\es-us.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\es.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\et.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\eu.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fa.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fi.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fr-ca.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fr-ch.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fr.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\fy.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\gd.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\gl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\gom-latn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\gu.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\he.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\hi.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\hr.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\hu.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\hy-am.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\id.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\is.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\it.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ja.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\jv.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ka.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\kk.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\km.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\kn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ko.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ky.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\lb.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\lo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\lt.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\lv.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\me.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\mi.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\mk.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ml.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\mr.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ms-my.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ms.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\my.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\nb.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ne.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\nl-be.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\nl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\nn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\pa-in.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\pl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\pt-br.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\pt.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ro.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ru.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sd.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\se.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\si.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sk.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sq.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sr-cyrl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sr.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ss.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sv.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\sw.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ta.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\te.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tet.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\th.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tl-ph.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tlh.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tr.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tzl.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tzm-latn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\tzm.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\uk.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\ur.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\uz-latn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\uz.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\vi.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\x-pseudo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\yo.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\zh-cn.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\zh-hk.js" />
+    <Content Include="wwwroot\assets\js\moment-locale\zh-tw.js" />
+    <Content Include="wwwroot\assets\js\moment.js" />
+    <Content Include="wwwroot\assets\js\view\demo.calendar.js" />
+    <Content Include="wwwroot\assets\js\view\demo.graphs.flot.js" />
+    <Content Include="wwwroot\assets\js\view\demo.graphs.morris.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\daterangepicker-bs2 %281%29.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\daterangepicker-bs2.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\daterangepicker.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\examples.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\moment.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\moment.min %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\moment.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\changelog.txt" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\css\bootstrap-dialog %281%29.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\css\bootstrap-dialog.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\css\bootstrap-dialog.min %281%29.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\css\bootstrap-dialog.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\js\bootstrap-dialog.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\js\bootstrap-dialog.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap-dialog\css\bootstrap-dialog.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap-dialog\css\bootstrap-dialog.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap-dialog\js\bootstrap-dialog.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap-dialog\js\bootstrap-dialog.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\js\npm.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\jquery\jquery-1.10.2.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\prettify\prettify.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\prettify\run_prettify.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\images\pig.ico" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\append-to-div.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\button-event.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\custom-dialog-id.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\only-one-dialog.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\reopen-dialog.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\spinning-icon.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\play\tabindex.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\remote.html" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\gulpfile.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\src\css\bootstrap-dialog.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\src\js\bootstrap-dialog.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ar-AR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ar-AR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-bg-BG.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-bg-BG.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ca-ES.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ca-ES.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-cs-CZ.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-da-DK.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-da-DK.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-de-DE.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-de-DE.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-el-GR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-el-GR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-es-ES.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-es-ES.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-es-EU.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-es-EU.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fa-IR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fa-IR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fi-FI.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fi-FI.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fr-FR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-fr-FR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-gl-ES.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-gl-ES.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-he-IL.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-he-IL.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-hr-HR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-hr-HR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-hu-HU.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-hu-HU.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-id-ID.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-id-ID.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-it-IT.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-it-IT.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ja-JP.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ja-JP.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ko-KR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ko-KR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-lt-LT.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-lt-LT.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-lt-LV.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-lt-LV.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-mn-MN.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-mn-MN.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-nb-NO.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-nb-NO.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-nl-NL.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-nl-NL.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pl-PL.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pl-PL.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pt-BR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pt-BR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pt-PT.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-pt-PT.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ro-RO.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ro-RO.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ru-RU.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ru-RU.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sk-SK.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sk-SK.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sl-SI.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sl-SI.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sr-RS.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sr-RS.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sv-SE.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-sv-SE.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ta-IN.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-ta-IN.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-th-TH.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-th-TH.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-tr-TR.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-tr-TR.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-uk-UA.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-uk-UA.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-vi-VN.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-vi-VN.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-zh-CN.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-zh-CN.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-zh-TW.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\lang\summernote-zh-TW.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\summernote.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\summernote.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\summernote.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\js\npm.js" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-flipped.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-flipped.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-rtl.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-rtl.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\link.txt" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\Chart.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\Chart.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\gulpfile.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\bar.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\doughnut.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\line-customTooltips.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\line.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\pie-customTooltips.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\pie.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\polar-area.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\samples\radar.html" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.Bar.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.Core.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.Doughnut.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.Line.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.PolarArea.js" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\src\Chart.Radar.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\angular.easypiechart.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\angular.easypiechart.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\easypiechart.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\easypiechart.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\jquery.easypiechart.js" />
+    <Content Include="wwwroot\assets\plugins\chart.easypiechart\jquery.easypiechart.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.colorhelpers.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.colorhelpers.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.animator.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.canvas.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.canvas.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.categories.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.categories.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.crosshair.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.crosshair.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.errorbars.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.errorbars.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.fillbetween.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.growraf.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.image.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.image.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.navigate.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.navigate.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.orderBars.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.orderBars.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.pie.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.pie.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.resize.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.resize.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.selection.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.selection.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.stack.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.stack.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.symbol.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.symbol.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.threshold.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.threshold.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.time.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.time.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.flot\jquery.flot.tooltip.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\dist\jquery.knob.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\excanvas.js" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\index.html" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\js\jquery.knob.js" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\secretplan.jpg" />
+    <Content Include="wwwroot\assets\plugins\chart.morris\morris.css" />
+    <Content Include="wwwroot\assets\plugins\chart.morris\morris.js" />
+    <Content Include="wwwroot\assets\plugins\chart.morris\morris.min.js" />
+    <Content Include="wwwroot\assets\plugins\chart.sparkline\jquery.sparkline.js" />
+    <Content Include="wwwroot\assets\plugins\chart.sparkline\jquery.sparkline.min.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\adapters\jquery.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\build-config.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\ckeditor.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\config.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\contents.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\af.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ar.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\bg.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\bn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\bs.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\cs.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\cy.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\da.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\de.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\el.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\en-au.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\en-ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\en-gb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\en.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\eo.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\es.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\et.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\eu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\fa.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\fi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\fo.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\fr-ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\fr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\gl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\gu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\he.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\hi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\hr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\hu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\id.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\is.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\it.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ja.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ka.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\km.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ko.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ku.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\lt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\lv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\mk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\mn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ms.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\nb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\nl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\no.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\pl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\pt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ro.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ru.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\si.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sq.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sr-latn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\sv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\th.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\tr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\tt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\ug.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\uk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\vi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\zh-cn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\lang\zh.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\about\dialogs\about %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\icons.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\ajax.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\api.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\appendto.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\datafiltering.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\divreplace.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\index.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\inlineall.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\inlinebycode.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\jquery.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\dialog\dialog %281%29.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\toolbar\toolbar %281%29.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\readonly.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\replacebyclass.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\replacebycode.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\sample.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\sample.js" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\tabindex.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\uicolor.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\uilanguages.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog %281%29.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_iequirks %281%29.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\icons.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\close.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\styles.js" />
+    <Content Include="wwwroot\assets\plugins\custom.fle_upload.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\css\jquery.dataTables.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColReorder\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\ColVis\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\bootstrap %281%29.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\col_filter %281%29.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\left_right_columns %281%29.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedColumns\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\background.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\Readme.txt" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\back_disabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\back_enabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\back_enabled_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\favicon.ico" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\forward_disabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\forward_enabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\forward_enabled_hover.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\sort_asc.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\sort_both.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\sort_desc.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.bootstrap.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.bootstrap.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.colReorder.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.foundation.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.foundation.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.jqueryui.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.jqueryui.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.scroller.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\dataTables.tableTools.min.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\jquery.dataTables.js" />
+    <Content Include="wwwroot\assets\plugins\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="wwwroot\assets\plugins\dropzone\css\basic.css" />
+    <Content Include="wwwroot\assets\plugins\dropzone\css\dropzone.css" />
+    <Content Include="wwwroot\assets\plugins\dropzone\dropzone-amd-module.js" />
+    <Content Include="wwwroot\assets\plugins\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="wwwroot\assets\plugins\dropzone\dropzone.js" />
+    <Content Include="wwwroot\assets\plugins\dropzone\dropzone.min.js" />
+    <Content Include="wwwroot\assets\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="wwwroot\assets\plugins\dropzone\images\spritemap.png" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\css\bootstrap-markdown.min.css" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\js\bootstrap-markdown.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\js\bootstrap-markdown.min.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.ar.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.de.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.es.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.fr.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.ja.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.kr.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.nb.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.nl.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.pl.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.ru.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.sl.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.sv.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.tr.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.ua.js" />
+    <Content Include="wwwroot\assets\plugins\editor.markdown\locale\bootstrap-markdown.zh.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ar-AR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ca-ES.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-da-DK.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-de-DE.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-es-ES.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-es-EU.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-fa-IR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-fi-FI.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-fr-FR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-he-IL.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-hu-HU.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-id-ID.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-it-IT.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ja-JP.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ko-KR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-nb-NO.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-nl-NL.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-pl-PL.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-pt-BR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ro-RO.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-ru-RU.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-sk-SK.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-sl-SI.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-sr-RS.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-sv-SE.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-th-TH.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-tr-TR.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-uk-UA.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-vi-VN.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-zh-CN.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-zh-TW.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\summernote-bs2.css" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\summernote-bs3.css" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\summernote.css" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\summernote.js" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\summernote.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\css\fonts\footable.svg" />
+    <Content Include="wwwroot\assets\plugins\footable\css\footable.core.css" />
+    <Content Include="wwwroot\assets\plugins\footable\css\footable.core.min.css" />
+    <Content Include="wwwroot\assets\plugins\footable\css\footable.metro.css" />
+    <Content Include="wwwroot\assets\plugins\footable\css\footable.standalone.css" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.all.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.bookmarkable.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.filter.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.paginate.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.sort.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\dist\footable.striping.min.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.bookmarkable.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.filter.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.grid.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.memory.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.paginate.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.plugin.template.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.sort.js" />
+    <Content Include="wwwroot\assets\plugins\footable\js\footable.striping.js" />
+    <Content Include="wwwroot\assets\plugins\footable\Update.txt" />
+    <Content Include="wwwroot\assets\plugins\form.masked\jquery.maskedinput.js" />
+    <Content Include="wwwroot\assets\plugins\form.slidebar\jquery-ui-slider-pips.min.js" />
+    <Content Include="wwwroot\assets\plugins\form.stepper\jquery.stepper.min.js" />
+    <Content Include="wwwroot\assets\plugins\form.validate\jquery.form.min.js" />
+    <Content Include="wwwroot\assets\plugins\form.validate\jquery.validation.min.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\gcal.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ar-sa.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ar-tn.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ar.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\bg.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ca.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\cs.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\da.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\de-at.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\de.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\el.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\es.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\fa.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\fi.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\fr.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\he.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\hi.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\hr.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\hu.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\id.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\is.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\it.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ja.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ko.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\lt.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\lv.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\nb.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\nl.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\pl.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\pt.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ro.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\ru.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\sk.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\sl.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\sr.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\sv.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\th.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\tr.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\uk.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\vi.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="wwwroot\assets\plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="wwwroot\assets\plugins\gmaps.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.fr.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.kr.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.min.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.nl.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.ru.js" />
+    <Content Include="wwwroot\assets\plugins\html_markdown\bootstrap-markdown.ua.js" />
+    <Content Include="wwwroot\assets\plugins\html_summernote\summernote.css" />
+    <Content Include="wwwroot\assets\plugins\html_summernote\summernote.js" />
+    <Content Include="wwwroot\assets\plugins\html_summernote\summernote.min.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\css\ui.jqgrid.css" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.base.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.celledit.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.common.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.custom.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.filter.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.formedit.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.grouping.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.import.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.inlinedit.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.jqueryui.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.pivot.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.subgrid.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.tbltogrid.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\grid.treegrid.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-ar.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-bg.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-bg1251.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-cat.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-cn.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-cs.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-da.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-de.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-dk.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-el.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-en.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-es.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-fa.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-fi.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-fr.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-gl.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-he.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-hr.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-hr1250.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-hu.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-id.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-is.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-it.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-ja.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-kr.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-lt.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-mne.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-nl.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-no.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-pl.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-pt.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-ro.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-ru.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-sk.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-sr.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-sv.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-th.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-tr.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-tw.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-ua.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\i18n\grid.locale-vi.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\jqDnR.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\jqModal.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\jquery.fmatter.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\jquery.jqGrid.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\JsonXml.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\js\minified\jquery.jqGrid.min.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\grid.addons.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\grid.postext.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\grid.setcolumns.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\jquery.contextmenu.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\jquery.searchFilter.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\jquery.tablednd.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\searchFilter.css" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\ui.multiselect.css" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\plugins\ui.multiselect.js" />
+    <Content Include="wwwroot\assets\plugins\jqgrid\update.txt" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\cors\postmessage.html" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\cors\result.html" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\blueimp-gallery.min.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\demo-ie8.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\demo.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\jquery.fileupload-noscript.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\jquery.fileupload-ui.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\jquery.fileupload.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\css\style.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\img\loading.gif" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\img\progressbar.gif" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\app.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\cors\jquery.postmessage-transport.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\cors\jquery.xdr-transport.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-angular.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-audio.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-image.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-jquery-ui.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-process.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-ui.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-validate.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload-video.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.fileupload.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\jquery.iframe-transport.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\main.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\canvas-to-blob.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\jquery.blueimp-gallery.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\load-image.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\tmpl.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\js\vendor\tmpl.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-go\static\favicon.ico" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-go\static\robots.txt" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-python\static\favicon.ico" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-python\static\robots.txt" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\node\server.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\fonts\footable.svg" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.core.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.core.min.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.metro.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.metro.min.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.standalone.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\footable.standalone.min.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.all.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.bookmarkable.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.filter.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.paginate.min %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.paginate.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.sort.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.striping.min %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\dist\footable.striping.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.bookmarkable.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.filter.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.grid.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.memory.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.paginate.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.plugin.template.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.sort.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\footable.striping.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\Update.txt" />
+    <Content Include="wwwroot\assets\plugins\jquery-vectormap\gdp-data.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-vectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="wwwroot\assets\plugins\jquery-vectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery-vectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="wwwroot\assets\plugins\jquery.mixitup.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery-2.2.3.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery-ui.min.css" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery-ui.min.js" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery.cookie.js" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery.ui.touch-punch.min.js" />
+    <Content Include="wwwroot\assets\plugins\knob\dist\jquery.knob.min.js" />
+    <Content Include="wwwroot\assets\plugins\knob\excanvas.js" />
+    <Content Include="wwwroot\assets\plugins\knob\index.html" />
+    <Content Include="wwwroot\assets\plugins\knob\js\jquery.knob.js" />
+    <Content Include="wwwroot\assets\plugins\knob\secretplan.jpg" />
+    <Content Include="wwwroot\assets\plugins\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="wwwroot\assets\plugins\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="wwwroot\assets\plugins\magnific-popup\magnific-popup.css" />
+    <Content Include="wwwroot\assets\plugins\moment.js" />
+    <Content Include="wwwroot\assets\plugins\nestable\index.html" />
+    <Content Include="wwwroot\assets\plugins\nestable\jquery.nestable.js" />
+    <Content Include="wwwroot\assets\plugins\raphael-min.js" />
+    <Content Include="wwwroot\assets\plugins\readme.txt" />
+    <Content Include="wwwroot\assets\plugins\require.js" />
+    <Content Include="wwwroot\assets\plugins\select2\css\select2.css" />
+    <Content Include="wwwroot\assets\plugins\select2\css\select2.min.css" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\az.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\bg.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\ca.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\cs.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\da.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\de.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\en.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\es.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\et.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\eu.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\fa.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\fi.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\fr.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\gl.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\hi.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\hr.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\hu.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\id.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\is.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\it.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\ko.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\lt.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\lv.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\mk.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\nb.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\nl.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\pl.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\pt-BR.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\pt.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\ro.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\ru.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\sk.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\sr.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\sv.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\th.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\tr.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\uk.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\vi.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\zh-CN.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\i18n\zh-TW.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\select2.full.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\select2.full.min.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\select2.js" />
+    <Content Include="wwwroot\assets\plugins\select2\js\select2.min.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-de.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-dk.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-es.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-fa.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-fi.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-fr.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-gr.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-he.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-hr.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-it.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-ja.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-nl.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-pl.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-pt-br.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-ru.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-sv.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-tr.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-zh-cn.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\i18n\jquery.spectrum-zh-tw.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\readme.txt" />
+    <Content Include="wwwroot\assets\plugins\spectrum\spectrum.css" />
+    <Content Include="wwwroot\assets\plugins\spectrum\spectrum.js" />
+    <Content Include="wwwroot\assets\plugins\spectrum\spectrum.min.js" />
+    <Content Include="wwwroot\assets\plugins\timepicki\timepicki.js" />
+    <Content Include="wwwroot\assets\plugins\timepicki\timepicki.min.js" />
+    <Content Include="wwwroot\assets\plugins\toastr\toastr.css" />
+    <Content Include="wwwroot\assets\plugins\toastr\toastr.js" />
+    <Content Include="wwwroot\assets\plugins\toastr\WARNING!.txt" />
+    <Content Include="wwwroot\assets\plugins\typeahead.bundle.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\dist\bootstrap3-editable\css\bootstrap-editable.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\dist\bootstrap3-editable\img\clear.png" />
+    <Content Include="wwwroot\assets\plugins\x-editable\dist\bootstrap3-editable\img\loading.gif" />
+    <Content Include="wwwroot\assets\plugins\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-container.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-container.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-inline.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-popover %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-popover.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-popover3.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-poshytip %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-poshytip.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\containers\editable-tooltip.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form-bootstrap.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form-bootstrap3.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form-jqueryui.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form-utils.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\editable-form\editable-form.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\element\editable-element.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\element\editable-element.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\img\clear.png" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\img\loading.gif" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\address\address.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\address\address.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\typeaheadjs\lib\typeahead.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\typeaheadjs\lib\typeahead.js-bootstrap.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\typeaheadjs\typeaheadjs.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysihtml5-0.3.0.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysihtml5-0.3.0.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysiwyg-color.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs-ext\wysihtml5\wysihtml5.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\abstract.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\checklist.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\combodate\combodate %281%29.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\combodate\combodate.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\combodate\lib\combodate.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\combodate\lib\moment.min.1.7.2.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\combodate\lib\moment.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\datetime\bootstrap-datetimepicker\css\datetimepicker.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\datetime\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\datetime\datetime.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\datetime\datetimefield.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\dateui.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\dateuifield.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.1.custom.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.2.custom.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.2.custom.min.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.3.custom.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.9.1.custom.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\jquery-ui-1.9.1.custom.min.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.1.custom.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.2.custom.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.9.1.custom.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\js\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\date\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\date\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\date\date.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\date\datefield.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\html5types.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\list.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2-bootstrap.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2-spinner.gif" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2.css" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2.min.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2.png" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\lib\select2x2.png" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\select2\select2.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\text.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\textarea.js" />
+    <Content Include="wwwroot\assets\plugins\x-editable\src\inputs\typeahead.js" />
+    <Content Include="wwwroot\scripts\jquery.autocomplete.js" />
+    <Content Include="wwwroot\scripts\jquery.autocomplete.min.js" />
+    <Content Include="wwwroot\scripts\jquery.prettyPhoto.js" />
+    <Content Include="wwwroot\scripts\jquery.validate.min.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Articulos\form.binding_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Articulos\form.validation_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Articulos\functionUtils.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Articulos\search.binding_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\contacto_helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\crud_helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\domicilio_helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\InputNumberMaxlength_helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\list.helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\notifications_helper_1.js" />
+    <Content Include="wwwroot\scripts\LibertadConsultas\Common\upload_file_1.js" />
+    <Content Include="wwwroot\scripts\ResizeMenuHelper_1.js" />
+    <Content Include="wwwroot\scripts\utils.js" />
+    <Content Include="wwwroot\scripts\utils_2.js" />
+    <Content Include="wwwroot\scripts\validations.js" />
+    <Content Include="wwwroot\scripts\validations_7.js" />
+    <Content Include="wwwroot\scripts\Vue-Deploy.js" />
+    <Content Include="wwwroot\scripts\vue.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="wwwroot\assets\plugins\jquery\images\" />
+    <Folder Include="wwwroot\assets\plugins\x-editable\src\inputs\dateui\jquery-ui-datepicker\css\redmond\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Areas\Consultas\Views\web.config" />
+    <Content Include="Areas\Consultas\Views\Articulo\MainPanel.cshtml" />
+    <Content Include="Areas\Consultas\Views\Articulo\_DetailsArticuloPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Articulo\_ScanSearchPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Shared\_ErrorPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Consultas\Views\Shared\_EmptyResultPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Shared\_LoadingPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Articulo\_DescriptionSearchPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Articulo\_SearchCodArtEanPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Articulo\_SearchDescriptionPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Shared\_ValidatingUserPartial.cshtml" />
+    <Content Include="Areas\Consultas\Views\Shared\_ValidatingUserErrorPartial.cshtml" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Shared\_FooterrPartial.cshtml" />
+    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\_ListSearchPanelPartial.cshtml" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-flipped.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap\RTL\bootstrap-rtl.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\bower.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\package.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.daterangepicker\README.md" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\.eslintignore" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\.eslintrc" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\bower.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\composer.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\dist\less\bootstrap-dialog.less" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap-dialog\less\bootstrap-dialog.less" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\examples\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\package.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\README.md" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.dialog\src\less\bootstrap-dialog.less" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\font\summernote.eot" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\font\summernote.ttf" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\font\summernote.woff" />
+    <Content Include="wwwroot\assets\plugins\bootstrap.summernote\summernote.js.map" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\.travis.yml" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\bower.json" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\CONTRIBUTING.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\00-Getting-Started.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\01-Line-Chart.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\02-Bar-Chart.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\03-Radar-Chart.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\04-Polar-Area-Chart.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\05-Pie-Doughnut-Chart.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\06-Advanced.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\docs\07-Notes.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\LICENSE.md" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\package.json" />
+    <Content Include="wwwroot\assets\plugins\chart.chartjs\README.md" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\bower.json" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\knob.jquery.json" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\LICENSE" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\package.json" />
+    <Content Include="wwwroot\assets\plugins\chart.knob\README.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\CHANGES.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\LICENSE.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\scayt\README.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\plugins\wsc\README.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\README.md" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="wwwroot\assets\plugins\ckeditor\skins\moono\readme.md" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\copy document %281%29.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\printer %281%29.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="wwwroot\assets\plugins\datatables\images\Sorting icons.psd" />
+    <Content Include="wwwroot\assets\plugins\dropzone\css\stylus\basic.styl" />
+    <Content Include="wwwroot\assets\plugins\dropzone\css\stylus\dropzone.styl" />
+    <Content Include="wwwroot\assets\plugins\dropzone\readme.md" />
+    <Content Include="wwwroot\assets\plugins\dropzone\upload.php" />
+    <Content Include="wwwroot\assets\plugins\editor.summernote\lang\summernote-pt-PT" />
+    <Content Include="wwwroot\assets\plugins\footable\css\fonts\footable.eot" />
+    <Content Include="wwwroot\assets\plugins\footable\css\fonts\footable.ttf" />
+    <Content Include="wwwroot\assets\plugins\footable\css\fonts\footable.woff" />
+    <Content Include="wwwroot\assets\plugins\footable\js\.jshintrc" />
+    <Content Include="wwwroot\assets\plugins\footable\less\footable.core.less" />
+    <Content Include="wwwroot\assets\plugins\footable\less\footable.metro.less" />
+    <Content Include="wwwroot\assets\plugins\footable\less\footable.standalone.less" />
+    <Content Include="wwwroot\assets\plugins\jquery\jquery-2.2.3.min.map" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-go\app.yaml" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-go\app\main.go" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-python\app.yaml" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\gae-python\main.py" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\node\package.json" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\php\files\.htaccess" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\php\index.php" />
+    <Content Include="wwwroot\assets\plugins\jquery-file-upload\server\php\UploadHandler.php" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\fonts\footable.eot" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\fonts\footable.ttf" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\css\fonts\footable.woff" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\js\.jshintrc" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\less\footable.core.less" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\less\footable.metro.less" />
+    <Content Include="wwwroot\assets\plugins\jquery-footable\less\footable.standalone.less" />
+    <Content Include="wwwroot\assets\plugins\knob\bower.json" />
+    <Content Include="wwwroot\assets\plugins\knob\knob.jquery.json" />
+    <Content Include="wwwroot\assets\plugins\knob\LICENSE" />
+    <Content Include="wwwroot\assets\plugins\knob\README.md" />
+    <Content Include="wwwroot\assets\plugins\nestable\README.md" />
+    <Content Include="wwwroot\assets\fonts\et-line.eot" />
+    <Content Include="wwwroot\assets\fonts\et-line.ttf" />
+    <Content Include="wwwroot\assets\fonts\et-line.woff" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\assets\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\LibertadIncluit.pubxml" />
+    <Content Include="Views\Error\PageNotFound.cshtml" />
+    <Content Include="wwwroot\assets\fonts\xjAJXh38I15wypJXxuGMBvZraR2Tg8w2lzm7kLNL0-w.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\2 - Services\LibertadIncluit.Application.Services\LibertadIncluit.Application.Services.csproj">
+      <Project>{DA5CCA63-8CE3-43F1-A01F-808EE6609FD9}</Project>
+      <Name>LibertadIncluit.Application.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\3 - DataAccess\LibertadIncluit.DataAccess\LibertadIncluit.DataAccess.csproj">
+      <Project>{547CA2C5-9058-4804-90B9-8DE36F61E0F6}</Project>
+      <Name>LibertadIncluit.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4 - Domain\LibertadIncluit.Domain.Model\LibertadIncluit.Domain.Model.csproj">
+      <Project>{A7C300C3-2329-478E-A7A3-3B408D5CB8F1}</Project>
+      <Name>LibertadIncluit.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\5 - Common\LibertadIncluit.Common\LibertadIncluit.Common.csproj">
+      <Project>{7F68C2D0-96A5-4F43-B9A2-44DBF4146832}</Project>
+      <Name>LibertadIncluit.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44374</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:42657/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

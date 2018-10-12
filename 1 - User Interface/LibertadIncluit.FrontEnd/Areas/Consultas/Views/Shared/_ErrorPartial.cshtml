@@ -1,0 +1,6 @@
+﻿<!-- error panel  -->
+<div class="alert alert-danger" v-if="p_ErrorMessage != '' ">
+    <a v-on:click="ClearError()"
+       v-on:keyup.enter="ClearError()"  class="close" aria-label="close" title="close">×</a>
+    <strong>Ocurrio un error: </strong><br />{{p_ErrorMessage}}
+</div>

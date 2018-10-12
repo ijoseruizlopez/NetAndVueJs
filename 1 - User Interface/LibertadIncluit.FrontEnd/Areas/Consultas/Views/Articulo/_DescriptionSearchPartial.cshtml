@@ -1,0 +1,85 @@
+﻿@Html.Partial("_SearchDescriptionPartial")
+
+<div v-if="(Entities!=null && Entities.length>0) && !LoadingResultDescription" style="padding-top:50px">
+    <div id="content" class="padding-20">
+
+        <div id="ArticuloListPanel" class="panel panel-default">
+                
+                <div class="table-responsive tab-pane" >
+                    <table id="myTable"class="table table-bordered table-striped nomargin table-condensed tab-pane">
+                        <thead style="background-color:#eaeae1">
+                            <tr>
+                                <th class="pointer" v-on:click="sort('CodigoArticulo')" style="width: 12%;">Cod. Art.<span v-if="CurrentOrder==1" class="glyphicon glyphicon-sort-by-attributes margin-left-10 "></span><span v-if="CurrentOrder==2" class="glyphicon glyphicon-sort-by-attributes-alt margin-left-10 "> </span></th>
+                                <th class="pointer" v-on:click="sort('CodEan')" style="width: 20%;">EAN<span v-if="CurrentOrder==3" class="glyphicon glyphicon-sort-by-attributes margin-left-10 "></span><span v-if="CurrentOrder==4" class="glyphicon glyphicon-sort-by-attributes-alt margin-left-10 "> </span></th>
+                                <th sty class="pointer" v-on:click="sort('Descripcion')" style="width: 68%;">Descripción<span v-if="CurrentOrder==5" class="glyphicon glyphicon-sort-by-attributes margin-left-10 "></span><span v-if="CurrentOrder==6" class="glyphicon glyphicon-sort-by-attributes-alt margin-left-10 "> </span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item, index) in Entities" tabindex="0" v-on:keyup.enter="ViewItem(item.CodigoArticulo)" v-on:keyup.up="keyUpTable(index)" v-on:keyup.down="keydownTable(index)">
+                                <td class="pointer activation" v-on:click.stop.prevent="ViewItem(item.CodigoArticulo)">{{item.CodigoArticulo}}</td>
+                                <td class="pointer activation" v-on:click="ViewItem(item.CodigoArticulo)" >{{item.CodEan}}</td>
+                                <td class="pointer activation" v-on:click="ViewItem(item.CodigoArticulo)">{{item.Descripcion}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<div v-if="LoadingResultDescription">
+    <div id="content" class="padding-20">
+        <div class="panel-body">
+            @Html.Partial("_LoadingPartial")
+        </div>
+    </div>
+</div>
+
+
+<div v-if="EmptyResultDescription">
+    <div id="content" class="padding-20">
+        <div class="panel-body">
+            @Html.Partial("_EmptyResultPartial")
+        </div>
+    </div>
+</div>
+
+<div v-if="ToManyResults">
+    <div id="content" class="padding-20">
+        <div class="panel-body">
+            <div>
+                <div class="container ">
+                    <div class="row" align="center" style="margin-top:20px">
+                        <div class="span12">
+                            <div class="footer" style="margin-bottom:10px; margin-right:20px;">
+                                <img style="width:128px; height:128px" src="~/wwwroot/assets/icons/moreResult.png" />
+                            </div>
+                            <lable>La búsqueda arrojó más de 25 resultados, por favor sea más específico.</lable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div v-if="EnterMoreThreeCaracteres">
+    <div id="content" class="padding-20">
+        <div class="panel-body">
+            <div>
+                <div class="container ">
+                    <div class="row" align="center" style="margin-top:5px">
+                        <div class="span12">
+                            <div class="footer" style="margin-bottom:10px; margin-right:20px;">
+                                <img style="width:64px; height:64px" src="~/wwwroot/assets/images/warning.png" />
+                            </div>
+                            <lable style="color:red; margin-right:20px;">Por favor, ingrese al menos 3 caracteres</lable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

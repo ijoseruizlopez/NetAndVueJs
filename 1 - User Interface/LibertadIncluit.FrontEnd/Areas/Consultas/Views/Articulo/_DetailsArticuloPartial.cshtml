@@ -1,0 +1,206 @@
+﻿<header>  
+    <div class="panel-heading pointer" v-on:click="BackSearch()" tabindex="0" v-on:keyup.enter="BackSearch()">
+        <img src="~/wwwroot/assets/icons/backicon.png" width="11" height="20" />
+        <strong>
+            Datos del Artículo
+        </strong>
+    </div>
+
+    <hr id="SepartorYellow" />
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 fancy-form">
+                    <label class="labelTitle">Código Interno</label>
+                    <label class="labelDescription">{{ArticuloSelection.CodigoArticulo}}</label>
+                </div>
+                <div class="col-md-6 col-sm-6 form-group fancy-form2">
+                    <label class="labelTitle">Descripción</label>
+                    <label class="labelDescription" style="font-size:16px!important; color:#212121 !important; font-weight: bold;">{{ArticuloSelection.Descripcion}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 form-group fancy-form2">
+                    <label class="labelTitle">EAN</label>
+                    <div class="row">
+                        <div v-if="ArticuloSelection.Eans[0]!=null && ArticuloSelection.Eans[0].Activo " class="col-md-4 col-sm-12 form-group fancy-form2" >
+                            <label class="labelDescription labelEanActivo" >{{ ArticuloSelection.Eans[0]==null? "" : ArticuloSelection.Eans[0].Ean==null ? "" :ArticuloSelection.Eans[0].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[0]==null? "" : ArticuloSelection.Eans[0].Ean==null ? "" :ArticuloSelection.Eans[0].Ean}}</label>
+                        </div>
+
+                        <div v-if="ArticuloSelection.Eans[1]!=null && ArticuloSelection.Eans[1].Activo!=null && ArticuloSelection.Eans[1].Activo" class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription labelEanActivo">{{ ArticuloSelection.Eans[1]==null? "" : ArticuloSelection.Eans[1].Ean==null ? "" :ArticuloSelection.Eans[1].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[1]==null? "" : ArticuloSelection.Eans[1].Ean==null ? "" :ArticuloSelection.Eans[1].Ean}}</label>
+                        </div>
+
+                        <div v-if="ArticuloSelection.Eans[2]!=null  && ArticuloSelection.Eans[2].Activo!=null && ArticuloSelection.Eans[2].Activo" class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription labelEanActivo">{{ ArticuloSelection.Eans[2]==null? "" : ArticuloSelection.Eans[2].Ean==null ? "" :ArticuloSelection.Eans[2].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[2]==null? "" : ArticuloSelection.Eans[2].Ean==null ? "" :ArticuloSelection.Eans[2].Ean}}</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div v-if="ArticuloSelection.Eans[3]!=null  && ArticuloSelection.Eans[3].Activo!=null && ArticuloSelection.Eans[3].Activo " class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription labelEanActivo">{{ ArticuloSelection.Eans[3]==null? "" : ArticuloSelection.Eans[3].Ean==null ? "" :ArticuloSelection.Eans[3].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[3]==null? "" : ArticuloSelection.Eans[3].Ean==null ? "" :ArticuloSelection.Eans[3].Ean}}</label>
+                        </div>
+
+                        <div v-if="ArticuloSelection.Eans[4]!=null  && ArticuloSelection.Eans[4].Activo!=null && ArticuloSelection.Eans[4].Activo" class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription labelEanActivo">{{ ArticuloSelection.Eans[4]==null? "" : ArticuloSelection.Eans[4].Ean==null ? "" :ArticuloSelection.Eans[4].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[4]==null? "" : ArticuloSelection.Eans[4].Ean==null ? "" :ArticuloSelection.Eans[4].Ean}}</label>
+                        </div>
+
+                        <div v-if="ArticuloSelection.Eans[5]!=null  && ArticuloSelection.Eans[5].Activo!=null && ArticuloSelection.Eans[5].Activo" class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription labelEanActivo">{{ ArticuloSelection.Eans[5]==null? "" : ArticuloSelection.Eans[5].Ean==null ? "" :ArticuloSelection.Eans[5].Ean}}</label>
+                        </div>
+                        <div v-else class="col-md-4 col-sm-12 form-group fancy-form2">
+                            <label class="labelDescription">{{ ArticuloSelection.Eans[5]==null? "" : ArticuloSelection.Eans[5].Ean==null ? "" :ArticuloSelection.Eans[5].Ean}}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 form-group fancy-form2">
+                    <label class="labelTitle">Estado</label>
+                    <label class="labelDescription">{{ArticuloSelection.Estado}}</label>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div> 
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 form-group fancy-form2">
+                        <label class="labelTitle">Estadístico</label>
+                    </div>
+                </div>
+
+                <div class="row" align="center">
+                    <div class="col-md-2  col-sm-12 form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.Grupo.Id}} - {{ArticuloSelection.Grupo.Descripcion}}</label>
+                    </div>
+                    <div class="col-md-2 col-sm-12 form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.Sector.Id}} - {{ArticuloSelection.Sector.Descripcion}}</label>
+                    </div>
+                    <div class="col-md-2 col-sm-12 form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.Familia.Id}} - {{ArticuloSelection.Familia.Descripcion}}</label>
+                    </div>
+                    <div class="col-md-2 col-sm-12  form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.SubFamilia.Id}} - {{ArticuloSelection.SubFamilia.Descripcion}}</label>
+                    </div>
+                    <div class="col-md-2 col-sm-12 form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.Categoria.Id}} - {{ArticuloSelection.Categoria.Descripcion}}</label>
+                    </div>
+                    <div class="col-md-2 col-sm-12 form-group fancy-form2">
+                        <label class="labelDescription">{{ArticuloSelection.SubCategoria.Id}} - {{ArticuloSelection.SubCategoria.Descripcion}}</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Clasificación Surtido</label>
+                        <label class="labelDescription">{{ArticuloSelection.ClasificacionSurtido}}</label>
+                    </div>
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Habilitado para la venta</label>
+                        <label class="labelDescription">{{ArticuloSelection.HabilitadoParaVenta}}</label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Stock</label>
+                        <label class="labelDescription">{{ArticuloSelection.Stock}}</label>
+                    </div>
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Unidad de Medida</label>
+                        <label class="labelDescription">{{ArticuloSelection.UnidadMedida}}</label>
+                    </div>
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Stock en tránsito</label>
+                        <label class="labelDescription">{{ArticuloSelection.StockEnTransito!=null? ArticuloSelection.StockEnTransito: 0 }}</label>
+                    </div>
+                    <div class="col-md-3 col-sm-3 form-group fancy-form2">
+                        <label class="labelTitle">Fecha de Envío</label>
+                        <label class="labelDescription">{{ArticuloSelection.FechaDeEnvio!=null? ArticuloSelection.FechaDeEnvio : "-" }}</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 form-group fancy-form2">
+                        <label class="labelTitle">Precio Vigente</label>
+                        <label class="labelDescription">{{ArticuloSelection.PrecioVigente}}</label>
+                    </div>
+                    <div class="col-md-3 col-sm-4 form-group fancy-form2">
+                        <label class="labelTitle">Tipo de Precio</label>
+                        <label class="labelDescription">{{ArticuloSelection.TipoPrecio}}</label>
+                    </div>
+                    <div class="col-md-6 col-sm-4 form-group fancy-form2">
+                        <label class="labelTitle">Fecha última modificación</label>
+                        <label class="labelDescription">{{ArticuloSelection.FechaUltimaModificacion}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 form-group fancy-form2" align="center">
+                    <img style="width:128px; height:128px" :src="ArticuloSelection.UrlImagen"/>
+                </div>
+                <div class="col-md-3 col-sm-6 form-group fancy-form2" style="margin-left:inherit">
+                    <div class="col-md-12 col-sm-12 form-group fancy-form2">
+                        <label class="labelTitle">Medidas</label>
+                        <label class="labelDescription">{{ArticuloSelection.Largo}}x{{ArticuloSelection.Ancho}}x{{ArticuloSelection.Altura}} cm</label>
+                    </div>
+                    <div class="col-md-12 col-sm-12 form-group fancy-form2">
+                        <label class="labelTitle">Peso</label>
+                        <label class="labelDescription">{{ArticuloSelection.Peso}} Kg</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row pull-right">
+                <div class="col-md-6 col-sm-6 form-group fancy-form2 ">
+                    <button class="btn btn-sm" onclick="vm.BackSearch();" style="height: 32px; margin-bottom:5px; margin-top:20px; margin-left:25px; margin-right:50px;">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+            @*<hr />
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 form-group fancy-form2" v-model="p_PromocionSelection">
+                    <label>Promociones</label>
+                    <select class="form-control pointer" v-model="p_PromocionSelection">
+                        <option v-for="promocion in ArticuloSelection.ComboPromociones" v-bind:value="promocion">
+                            {{promocion.Descripcion}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 col-sm-6 form-group fancy-form2">
+                    <label>Precio Promo</label>
+                    <label class="labelDescription" style="color:green">{{PromoCalculate}}</label>
+                </div>
+
+                <div class="col-md-4 col-sm-6 form-group fancy-form2">
+                    <button class="btn btn-sm" onclick="vm.BackSearch();" style="height: 32px; margin-bottom:5px; margin-top:20px; margin-left:25px;">
+                        Volver
+                    </button>
+                </div>
+            </div>*@
+      
+        </div>
+    </div>
+</header>

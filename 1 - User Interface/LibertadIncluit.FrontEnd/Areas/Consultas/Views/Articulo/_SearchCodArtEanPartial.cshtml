@@ -1,0 +1,29 @@
+﻿<div class="row" style="margin-top:20px">
+    <div class="col-md-12">
+        <div align="center">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Buscar por EAN/Código Interno</label>
+                </div>
+            </div>
+            <div  class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 fancy-form ">
+                    <input 
+                           autocomplete="off"
+                           v-bind:Disabled="RequestActive" id="SearchPanelTextToSearch" v-model="CodArticuloEanSearch" 
+                           v-on:click="ClearValidationCodArticuloEan()"
+                           v-on:keyup.delete ="CleanNoResult()" 
+                           v-on:keyup.enter="SearchCodArticuloEAN()" 
+                           v-on:keypress="NotIsCaracterEspecial(event)" 
+                           class="form-control" placeholder="Código de Artículo o EAN" style="height: 30px; display: initial;" maxlength="13" onpaste="return false;" autofocus >
+                    <button v-bind:Disabled="RequestActive" class="btn btn-sm" style="text-align:center" v-on:keyup.enter="ClearCodArticuloEan()" v-on:click="ClearCodArticuloEan()">
+                        <img src="~/wwwroot/assets/images/clearButton.png" width="20" height="20" />
+                    </button>
+                    <button v-bind:Disabled="RequestActive" id="SearchPanelSearchButton" class="btn btn-sm"  v-on:click="SearchCodArticuloEANClick();" style="height: 32px; width:20%">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

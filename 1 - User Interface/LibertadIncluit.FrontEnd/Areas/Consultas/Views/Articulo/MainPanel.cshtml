@@ -1,0 +1,113 @@
+﻿
+@using LibertadIncluit.FrontEnd.Helpers
+@using System.Web;
+
+@section DelayedScripts
+    {
+
+    <link href="~/wwwroot/assets/css/Consultas/LibertadIncluitConsulta.css" rel="stylesheet" type="text/css" />
+
+
+    <script>
+        var ListBindElementName = "#ArticuloListBind";
+        var WebApiSearchUrl = "/api/Articulo";
+        var WebApiValidateUser = "/api/ValidateUser";
+        var ViewUrlPath = "/AssistCargo/Avls/ViewDetail/";
+        var EditUrlPath = "/Libertad/Articulo/Edit/";
+        var DeleteUrlPath = "/Libertad/Articulo/Delete/";
+        var usuarioEncode = '@ViewBag.UsuarioEncode';
+    </script>
+
+    @*Agregamos Vue binding*@
+    <script src="~/wwwroot/scripts/LibertadConsultas/Articulos/search.binding_1.js"></script>
+    <script src="~/wwwroot/scripts/LibertadConsultas/Articulos/functionUtils.js"></script>
+
+}
+
+@{
+    //MasterLayoutHelper.AddForDelayedJavaScriptFile("wwwroot/scripts/LibertadConsultas/Articulos/search.binding_1.js", System.Web.HttpContext.Current);
+    MasterLayoutHelper.AddLineToDocumentReadyFunction("ValidateUser();", System.Web.HttpContext.Current);
+}
+
+
+<div class="container">
+
+    <div id="ArticuloListBind" v-cloak="">
+        <div v-if="!inicioSesion">
+            <div id="content" class="padding-20">
+                <div class="panel-body">
+                    @Html.Partial("_ValidatingUserPartial")
+                </div>
+            </div>
+        </div>
+
+
+        <div id="preloader">
+            <div class="inner">
+
+            </div>
+        </div>
+
+        <div v-if="!inicioSesion">
+            <div id="content" class="padding-20">
+                <div class="panel-body">
+                    @Html.Partial("_ValidatingUserErrorPartial")
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:50px">
+                @Html.Partial("_ErrorPartial")
+            </div>
+        </div>
+
+
+        <div id="divTitleCons" class="panel-heading pointer" v-if="inicioSesion" style="text-align:center; margin-top:60px;">
+            <strong style="font-size:18px">
+                Consulta de Artículo
+            </strong>
+        </div>
+
+        <div id="divBodyCons" v-if="inicioSesion" style="margin-top:10px">
+
+            <div class="tabs nomargin-top" v-if="ArticuloSelection==null">
+
+                <ul class="nav nav-tabs">
+                    <li id="scanerSearchTabLi" class="active" align="center" v-on:click.prevent="CenterSearch('SearchPanelTextToSearch')" v-on:keyup.enter.prevent="CenterSearch('SearchPanelTextToSearch')">
+                        <a id="scanerSearchTab" href="#ScanerSearch" data-toggle="tab">SCAN. CÓDIGO DE ART./EAN</a>
+                    </li>
+                    <li id="descriptionTabLi" align="center" v-on:click.prevent="CenterSearch('SearchPanelDescriptionToSearch')" v-on:keyup.enter.prevent="CenterSearch('SearchPanelDescriptionToSearch')">
+                        <a id="descriptionTab" href="#Description" data-toggle="tab">DESCRIPCIÓN</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div id="ScanerSearch" class="tab-pane active">
+                        <fieldset id="ScanerSearchFieldset">
+                            @Html.Partial("_ScanSearchPartial")
+                        </fieldset>
+                    </div>
+
+                    <div id="Description" class="tab-pane">
+                        <fieldset id="descriptionFieldset">
+                            @Html.Partial("_DescriptionSearchPartial")
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs nomargin-top" v-if="ArticuloSelection!=null">
+                <div class="tab-content">
+                    <div>
+                        @Html.Partial("_DetailsArticuloPartial")
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:50px">
+                @Html.Partial("_ErrorPartial")
+            </div>
+        </div>
+
+    </div>
+</div>

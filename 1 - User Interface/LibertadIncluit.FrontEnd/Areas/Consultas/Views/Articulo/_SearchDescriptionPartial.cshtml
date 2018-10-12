@@ -1,0 +1,38 @@
+﻿
+<div class="row" style="margin-top:20px">
+    <div class="col-md-12">
+        <div align="center">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Ingrese Artículo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 fancy-form">
+                    <input autocomplete="off" 
+                           v-bind:Disabled="RequestActive" id="SearchPanelDescriptionToSearch" v-model="DescriptionSearch" 
+                           v-on:click="ClearValidationDescription()"
+                           v-on:keyup.delete="CleanDescriptionNoResult()"  
+                           v-on:keyup.enter.prevent="SearchDescription()" 
+                           v-on:keypress="ClearValidationDescription()" 
+                           class="form-control" placeholder="Descripción" style="height: 30px; display: initial;" maxlength="50" autofocus>
+                    <button v-bind:Disabled="RequestActive" class="btn btn-sm" style="text-align:center" v-on:keyup.enter="ClearDescription()" v-on:click="ClearDescription()">
+                        <img src="~/wwwroot/assets/images/clearButton.png" width="20" height="20"/>
+                    </button>
+                    <button v-bind:Disabled="RequestActive" id="SearchPanelSearchButton" class="btn btn-sm" v-on:click="SearchDescriptionClick();" style="height: 32px; width:20%">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-12"  v-if="Entities!=null && Entities.length==1">
+                    <label style="color:dimgray">{{Entities.length}} Resultado</label>
+                </div>
+                <div class="col-md-12" v-if="Entities!=null && Entities.length>1">
+                    <label style="color:dimgray">{{Entities.length}} Resultados</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

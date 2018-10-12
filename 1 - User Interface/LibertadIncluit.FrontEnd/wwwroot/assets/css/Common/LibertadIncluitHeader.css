@@ -1,0 +1,24 @@
+﻿.container.toplibertad {
+    /*background-image: url(../img/top.png);*/
+    background-repeat: no-repeat;
+    min-height: 85px;
+    padding-left: 25px;
+    padding-top: 10px;
+    color: #fff;
+    background-color: #e3001b;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+#page-header > div > div > hr {
+    color:#000000;
+}
+
+
+
+#header > div {
+    height:7vh;
+    width:90%;
+}

@@ -1,0 +1,70 @@
+﻿@using LibertadIncluit.FrontEnd.Helpers
+@using System.Web;
+<!doctype html>
+<html lang="es-AR">
+<head>
+    @*<link rel="shortcut icon" type="image/ico" href="/favicon.ico?v2">*@
+    <meta charset="UTF-8/ISO-8859-1" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Libertad  Incluit</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="LibertadIncluit" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link href='~/wwwroot/assets/css/font.css' rel='stylesheet' type='text/css'>
+
+    <!-- CORE CSS -->
+    <!-- THEME CS2S -->
+    <link href="~/wwwroot/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    
+    <link href="~/wwwroot/assets/css/Common/LibertadIncluit.css" rel="stylesheet" type="text/css" />
+    <link href="~/wwwroot/assets/css/Common/LibertadIncluitFooter.css" rel="stylesheet" type="text/css" />
+    <link href="~/wwwroot/assets/css/Common/LibertadIncluitHeader.css" rel="stylesheet" type="text/css" />
+    <link href="~/wwwroot/assets/css/Common/LibertadIncluitLabels.css" rel="stylesheet" type="text/css" />
+    <link href="~/wwwroot/assets/css/Common/LibertadIncluitNav.css" rel="stylesheet" type="text/css" />
+    
+    @RenderSection("HtmlHead", false)
+
+</head>
+<body>
+    <div id="wrapper">
+
+        @*Renderizamos la cabecera esperamos a que cargue*@
+        @Html.Partial("_HeaderPartial")
+
+        @*Renderizamos la el cuerpo *@
+        <section id="middle">
+            @RenderBody()
+        </section>
+
+  
+    </div>
+
+    <!-- JAVASCRIPT Necesarios -->
+    <environment include="Development">
+        <script src="~/wwwroot//scripts/Vue.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/wwwroot/scripts/Vue-Deploy.js"></script>
+    </environment>
+    <script type="text/javascript">var plugin_path = '/wwwroot/assets/plugins/';</script>
+    <script type="text/javascript" src="~/wwwroot/assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="~/wwwroot/assets/js/app_2.js"></script>
+    <script type="text/javascript" src="~/wwwroot/assets/js/config.js"></script>
+    <script src="~/wwwroot/scripts/utils.js"></script>
+    <script src="~/wwwroot/assets/js/custom.js"></script>
+    @*<script type="text/javascript" src="~/wwwroot//assets/js/custom.js"></script>*@
+    @RenderSection("DelayedScripts", false)
+    @Html.Raw(MasterLayoutHelper.GetDelayedJavaScriptFiles(System.Web.HttpContext.Current))
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            @Html.Raw(MasterLayoutHelper.GetLinesForDocumentReadyFunction(System.Web.HttpContext.Current))
+        });
+    </script>
+    
+</body>
+</html>

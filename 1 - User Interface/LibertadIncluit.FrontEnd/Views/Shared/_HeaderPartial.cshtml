@@ -1,0 +1,35 @@
+﻿<header id="header" style="color: red;">
+
+    <nav>
+
+        <!-- OPTIONS LIST -->
+        <ul class="nav pull-right" style="background-color:#e3001b;  height:60px!important">
+
+            <li class="pull-left">
+                <img src="~/wwwroot/assets/images/logo_libertad_blanco.png" width="96" height="39" style="margin-top:10px; margin-left:5px" />
+            </li>
+            <li class="dropdown pull-right">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" tabindex=1>
+                    <span class="user-name" style="display:block;">
+                        <span style="color:white">
+                            <lable id="Usuario"></lable>
+                        </span>
+                        <br />
+                        <span style="color:white">
+                            <lable id="Legajo"></lable> <lable id="Sucursal"></lable> 
+                        </span>
+                        <i><img id="iconMenu" src="~/wwwroot/assets/icons/downicon.png"  height="6" width="11" /></i>
+                    </span>
+                </a>
+                <ul class="pointer dropdown-menu hold-on-click" >
+                    <li tabindex=2 onkeypress="CerrarSesion()">
+                        <a onclick="CerrarSesion()"><i class="fa fa-power-off"></i> Cerrar sesión</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
